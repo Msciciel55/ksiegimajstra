@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zamówienia</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>Zamówienia</h1>
+        <form id="orderForm">
+        <input type="text" id="zamawiajacy" placeholder="Zamawiający" required>
+        <input type="text" id="przedmiot" placeholder="Przedmiot" required>
+        <input type="number" id="ustalonaCena" placeholder="Ustalona cena" required>
+    
+        <!-- Zmienione pole płatności na listę rozwijaną -->
+        <select id="platnosc" required>
+            <option value="" disabled selected>Wybierz płatność</option>
+            <option value="Opłacone">Opłacone</option>
+            <option value="Zaliczka">Zaliczka</option>
+            <option value="Przy odbiorze">Przy odbiorze</option>
+        </select>
+    
+        <button type="submit">Dodaj wpis</button>
+    </form>
+
+    <div class="table-container">
+        <table id="ordersTable">
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Zamawiający</th>
+                    <th>Przedmiot</th>
+                    <th>Ustalona cena</th>
+                    <th>Płatność</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Wpisy będą tutaj dodawane -->
+            </tbody>
+        </table>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+/* Styl ogólny dla strony głównej z tłem i blurem */
+body {
+    font-family: 'Gothicll', sans-serif; /* Czcionka gotycka */
+    padding: 20px;
+    margin: 0;
+    background: url('assets/tlo.webp') no-repeat center center fixed;
+    background-size: cover;
+    backdrop-filter: blur(8px); /* Efekt rozmycia */
+    height: 100vh; /* Ustawienie pełnej wysokości dla poprawnego wyświetlania tła */
+}
+
+/* Styl dla logo w lewym górnym rogu */
+.logo {
+    position: absolute; /* Przyklejony do lewego górnego rogu */
+    top: 10px;
+    left: 10px;
+    width: 130px;
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8); /* Półprzezroczyste tło */
+    padding: 1px 0px;
+    border-radius: 50px; /* Zaokrąglenie krawędzi */
+    z-index: 1000; /* Umieszcza nad innymi elementami */
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Tworzy kształt koła */
+    margin-right: 10px;
+}
+
+.logo span {
+    font-size: 20px;
+    font-family: 'storm', sans-serif; /* Czcionka dla napisu Mściciel */
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Cień dla lepszej widoczności tekstu */
+}
+
+/* Nagłówki */
+h1 {
+    color: white;
+    text-align: center;
+    margin-top: 100px; /* Aby logo było nad nagłówkiem */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Cień dla h1 */
+}
+
+/* Styl przycisków prowadzących do podstron */
+ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+li {
+    margin: 10px 0;
+}
+
+/* Styl dla przycisków nawigacyjnych */
+a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: rgba(0, 0, 0, 0.7); /* Półprzezroczyste tło */
+    color: white;
+    font-size: 18px;
+    border-radius: 10px; /* Zaokrąglone krawędzie przycisków */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Cień dla lepszej widoczności linków */
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Zmiana koloru tła po najechaniu */
+    text-decoration: underline;
+}
+
+/* Dodanie czcionek */
+@font-face {
+    font-family: 'Gothicll';
+    src: url('fonts/Gothicll.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'storm';
+    src: url('fonts/Storm\ Gust.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
